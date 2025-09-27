@@ -1,26 +1,12 @@
 #include <stdio.h>
 int main(){
-    printf("Enter color");
-    char count[100];
-    fgets(count,sizeof(count),stdin);
-    char ch=count[0];
-    if(ch=='O' || ch=='o'){
-        printf("Ammonia");
-
-    }
-    else if(ch=='b' || ch=='B'){
-        printf("Carbon Monoxide");
+    int result [2][3]={1,2,3,4,5,6};
+    for(int i=0;i<2;i++){
         
-    }
-    else if(ch=='y' || ch=='Y'){
-        printf("Hybrogen");
-        
-    }
-    else if(ch=='g' || ch=='G'){
-        printf("Oxygen");
-    }
-    else{
-        printf("unknown content");
+        for(int j=0;j<3;j++){
+            printf("%d\t",result[i][j]);
+        }
+        printf("\n");
     }
     return 0;
 }

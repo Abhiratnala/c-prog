@@ -1,21 +1,18 @@
 #include <stdio.h>
 int main(){
-    int n;
-    printf("Enter n\t");
-    scanf("%d",&n);
-    int d=0,s=0;
-    while(n!=0){
-        d=n%10;
-        printf("%d\t",d);
-        s+=d;
-        n=n/10;
+    int result [3][3];
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            scanf("%d",&result[i][j]);
+        }
     }
-    
-    if(s%9==0){
-        printf("\ndivisible by 9");
-    }
-    else{
-        printf("\nnot divisible by 9");
+   
+    for(int i=0;i<3;i++){
+       
+        for(int j=0;j<3;j++){
+            printf("%d\t",result[i][j]);
+        }
+        printf("\n");
     }
     return 0;
 }

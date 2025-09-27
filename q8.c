@@ -1,22 +1,33 @@
 #include <stdio.h>
 int main(){
-    int units;
-    float cost;
-    printf("enter units");
-    scanf("%d",&units);
-    if(units <=100){
-cost=units*1.50;
+    int result [3][3];
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            scanf("%d",&result[i][j]);
+        }
     }
-    else if(units-100<=200){
-        cost=(units-100)*2.50;
+     for(int i=0;i<3;i++){
+      
+        for(int j=0;j<3;j++){
+            printf("%d\t",result[i][j]);
+        }
+        printf("\n");
     }
-    else{
-        cost=units*4.00;
-
+    for(int i=0;i<3;i++){
+        for(int j=i+1;j<3;j++){
+            
+int temp=result[i][j];
+result[i][j]=result[j][i];
+result[j][i]=temp;
+        }
     }
-    if(cost>1000){
-        cost=cost*(1+0.1);
+    printf("\n");
+    for(int i=0;i<3;i++){
+      
+        for(int j=0;j<3;j++){
+            printf("%d\t",result[i][j]);
+        }
+        printf("\n");
     }
-    printf("Total cost%f ",cost);
     return 0;
 }
